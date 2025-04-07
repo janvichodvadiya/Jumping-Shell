@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Kill : MonoBehaviour
 {
-    public int ReSpwan;
+    public int Respawn; 
 
-     void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Pokie"))
+        if (other.CompareTag("Player")) 
         {
-            SceneManager.LoadScene(ReSpwan);
+            SceneManager.LoadScene(Respawn);
         }
     }
 }

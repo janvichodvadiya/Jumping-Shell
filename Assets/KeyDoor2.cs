@@ -7,7 +7,7 @@ public class KeyDoor2 : MonoBehaviour
     public GameObject Door;
     private void OnTriggerEnter2D(Collider2D colliosion)
     {
-        if (colliosion.CompareTag("MiniPlayer"))
+        if (colliosion.CompareTag("Player"))
         {
             Debug.Log("Key Picked Up");
 
