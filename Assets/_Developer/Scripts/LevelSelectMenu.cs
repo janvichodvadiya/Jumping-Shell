@@ -10,7 +10,7 @@ public class LevelSelectMenu : MonoBehaviour
     public static int CurrentLevel;
     public static int UnlockLevel;
 
-    private void Awake()
+   /* private void Awake()
     {
         UnlockLevel = PlayerPrefs.GetInt("UnlockLevel", 1);
 
@@ -23,7 +23,7 @@ public class LevelSelectMenu : MonoBehaviour
         {
             Level[i].interactable = true; 
         }
-    }
+    }*/
 
     public void OnClick(int LevelNum)
     {

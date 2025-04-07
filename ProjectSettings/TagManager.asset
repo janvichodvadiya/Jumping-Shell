@@ -4,19 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Pokie
-  - PowerUp
   - Ground
-  - Collect
   - Shell
-  - MiniPlayer
-  - OldFrame
   - Portal
   - Level
-  - RedObject
-  - Exit
+  - Frame
+  - Level2
+  - F2
   - SmallPlayer
-  - NanoPlayer
+  - Spike
   layers:
   - Default
   - TransparentFX

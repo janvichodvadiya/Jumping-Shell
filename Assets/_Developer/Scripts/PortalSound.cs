@@ -14,7 +14,7 @@ public class PortalSound : MonoBehaviour
     {
         if (other.CompareTag("Player")) 
         {
-            audioSource.PlayOneShot(portalSound); 
+            audioSource.PlayOneShot(portalSound);
         }
     }
 }
