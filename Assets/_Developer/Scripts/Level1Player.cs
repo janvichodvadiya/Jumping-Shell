@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Level1Player : MonoBehaviour
 {
+    
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
     public int maxJumps = 3;
@@ -34,38 +35,38 @@ public class Level1Player : MonoBehaviour
 
     void Move()
     {
-        /*
            float Xmove = Input.GetAxis("Horizontal");
         float Ymove = Input.GetAxis("Vertical");
         rb.velocity += new Vector2(Xmove, Ymove) * Time.deltaTime * Speed;
-        */
-        float xMovement = joystick.Horizontal;
-        float yMovement = joystick.Vertical;
 
-        Vector2 moveDirection = new Vector2(xMovement, yMovement) * Speed;
-        rb.velocity = new Vector2(moveDirection.x, rb.velocity.y);
+        //float xMovement = joystick.Horizontal;
+        //float yMovement = joystick.Vertical;
+
+        //Vector2 moveDirection = new Vector2(xMovement, yMovement) * Speed;
+        //rb.velocity = new Vector2(moveDirection.x, rb.velocity.y);
     }
 
 
-    void Jump()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (isGrounded || jumpCount < maxJumps)
-            {
-                JumpSound.Play();
-                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-                // rb.AddForce(new Vector2(0 , 1) * jumpForce , ForceMode2D.Impulse);
-                jumpCount++;
-                isGrounded = false;
+  void Jump()
+      {
+          if (Input.GetKeyDown(KeyCode.Space))
+          {
+              if (isGrounded || jumpCount < maxJumps)
+              {
+                  JumpSound.Play();
+                  rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                  // rb.AddForce(new Vector2(0 , 1) * jumpForce , ForceMode2D.Impulse);
+                  jumpCount++;
+                  isGrounded = false;
 
-                if (jumpCount == maxJumps)
-                {
-                    ShrinkPlayer();
-                }
-            }
-        }
-    }
+                  if (jumpCount == maxJumps)
+                  {
+                      ShrinkPlayer();
+                  }
+              }
+          }
+      }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

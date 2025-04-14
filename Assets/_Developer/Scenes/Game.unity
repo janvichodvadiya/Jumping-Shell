@@ -136,7 +136,6 @@ GameObject:
   - component: {fileID: 1637764}
   - component: {fileID: 1637767}
   - component: {fileID: 1637768}
-  - component: {fileID: 1637769}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -245,9 +244,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1637769}
-        m_TargetAssemblyTypeName: ADS, Assembly-CSharp
-        m_MethodName: ShowRewardAd
+      - m_Target: {fileID: 1005637534}
+        m_TargetAssemblyTypeName: FirebaseMan, Assembly-CSharp
+        m_MethodName: LoadDbData
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -404,21 +403,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1637769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1637762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ab0eff593de5c0428b96c7fe437d674, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BannerAdID: 'ca-app-pub-3940256099942544/6300978111  '
-  InterstitialAdID: 'ca-app-pub-3940256099942544/1033173712  '
-  RewardAdID: 'ca-app-pub-3940256099942544/5224354917  '
 --- !u!1 &67256374
 GameObject:
   m_ObjectHideFlags: 0
@@ -3067,6 +3051,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 861867087}
   m_CullTransparentMesh: 1
+--- !u!1 &1005637531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1005637533}
+  - component: {fileID: 1005637534}
+  m_Layer: 0
+  m_Name: Firebase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1005637533
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005637531}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1005637534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005637531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8595a574bfd63e449206e62e3ad2230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Email: {fileID: 0}
+  Password: {fileID: 0}
+  UserID: 
+  UserDataClss:
+    UserID: 
+    UserName: 
+    Score: 0
 --- !u!1 &1057420101
 GameObject:
   m_ObjectHideFlags: 0
@@ -4909,7 +4944,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -6024,3 +6059,4 @@ SceneRoots:
   - {fileID: 255669983}
   - {fileID: 494415320}
   - {fileID: 634637763}
+  - {fileID: 1005637533}

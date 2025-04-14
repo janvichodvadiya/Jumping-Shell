@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "481535250393",
+    "firebase_url": "https://fir-98c8e-default-rtdb.firebaseio.com",
+    "project_id": "fir-98c8e",
+    "storage_bucket": "fir-98c8e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:481535250393:android:dd3f0dcbafaa0a589fd3c8",
+        "android_client_info": {
+          "package_name": "com.firebase.janvi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDc3vdyw0MM6q07S1bM6lqOZ9opEJYXNvM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
