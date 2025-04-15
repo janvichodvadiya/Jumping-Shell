@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/_Developer/Sprits/Frame.png.meta
 guid: 57b8c1a63d948404f810ee1970d022a1
+========
+guid: 90935c66aa8a4ef4c9fb39d5b065db95
+>>>>>>>> 48468ab8d6b3f30320a75369642b14d65813b7ac:Assets/_Developer/Sprits/Group 97.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

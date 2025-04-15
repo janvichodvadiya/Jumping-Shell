@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8846246973907991971}
   - component: {fileID: 7670727994501453385}
   - component: {fileID: 1985738594263232908}
-  - component: {fileID: 8278345263262585379}
   - component: {fileID: 7330543645715104817}
   m_Layer: 0
   m_Name: NewPlayer
@@ -160,25 +159,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &8278345263262585379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5936214260022825274}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad0584f14071d2544858839c2a64fbfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 15
-  JumpForce: 7
-  rb: {fileID: 1985738594263232908}
-  smallPlayerPrefab: {fileID: 8961499321747963765, guid: e7374ef80cfff044d83abfc41c2f1fc5, type: 3}
-  fallingFramePrefab: {fileID: 4596071235352263941, guid: b5576b327c43ec64490d1acdc79db331, type: 3}
-  smallPlayerOffset: 1
-  frameFallSpeed: 1
 --- !u!82 &7330543645715104817
 AudioSource:
   m_ObjectHideFlags: 0
