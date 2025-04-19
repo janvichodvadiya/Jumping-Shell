@@ -1,10 +1,10 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using GoogleMobileAds;
 using GoogleMobileAds.Api;
 
-public class ADS : MonoBehaviour
+public class ADmob : MonoBehaviour
 {
     InterstitialAd InterstitialAdRef;
     BannerView BannerViewRef;
@@ -14,11 +14,11 @@ public class ADS : MonoBehaviour
 
     bool? IsInitialized;
 
-   
     private void Awake()
     {
         InitializAdMob();
     }
+
     void InitializAdMob()
     {
         if (IsInitialized != null) return;
@@ -49,7 +49,6 @@ public class ADS : MonoBehaviour
         {
             adId = BannerAdID;
         }
-
         BannerViewRef = new BannerView(adId, AdSize.Banner, AdPosition.Bottom);
 
         AdRequest adRequest = new AdRequest();
@@ -86,7 +85,7 @@ public class ADS : MonoBehaviour
         {
             InterstitialAdRef.Show();
         }
-        else 
+        else
         {
             Debug.Log("IntertitialAd can not be shown");
             LoadInterstitialAd();

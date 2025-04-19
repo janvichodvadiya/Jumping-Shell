@@ -3,8 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class ReplayLevel : MonoBehaviour
 {
-    public void ReloadCurrentLevel()
+    public void ReplayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name );
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+   
 }

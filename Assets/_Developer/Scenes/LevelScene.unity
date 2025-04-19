@@ -1533,7 +1533,6 @@ GameObject:
   - component: {fileID: 42512059}
   - component: {fileID: 42512062}
   - component: {fileID: 42512060}
-  - component: {fileID: 42512063}
   m_Layer: 0
   m_Name: Door (1)
   m_TagString: Untagged
@@ -1629,51 +1628,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &42512063
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 42512058}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &42752056
 GameObject:
   m_ObjectHideFlags: 0
@@ -4608,7 +4562,7 @@ Transform:
   m_GameObject: {fileID: 256566897}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -847.12, y: -593.71, z: 0}
+  m_LocalPosition: {x: -846.35, y: -593.81, z: 0}
   m_LocalScale: {x: 0.70384973, y: -0.7450249, z: 0.70384973}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15349,7 +15303,6 @@ GameObject:
   - component: {fileID: 596043920}
   - component: {fileID: 596043919}
   - component: {fileID: 596043918}
-  - component: {fileID: 596043921}
   m_Layer: 5
   m_Name: HomePage
   m_TagString: Untagged
@@ -15433,8 +15386,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 596043921}
-        m_TargetAssemblyTypeName: ADS, Assembly-CSharp
+      - m_Target: {fileID: 1752203256}
+        m_TargetAssemblyTypeName: ADmob, Assembly-CSharp
         m_MethodName: ShowInterstitialAd
         m_Mode: 1
         m_Arguments:
@@ -15483,21 +15436,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 596043916}
   m_CullTransparentMesh: 1
---- !u!114 &596043921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 596043916}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ab0eff593de5c0428b96c7fe437d674, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BannerAdID: ca-app-pub-3940256099942544/6300978111
-  InterstitialAdID: ca-app-pub-3940256099942544/1033173712
-  RewardAdID: 'ca-app-pub-3940256099942544/5224354917  '
 --- !u!1 &596979861
 GameObject:
   m_ObjectHideFlags: 0
@@ -61786,7 +61724,6 @@ GameObject:
   - component: {fileID: 1570495719}
   - component: {fileID: 1570495718}
   - component: {fileID: 1570495717}
-  - component: {fileID: 1570495720}
   m_Layer: 5
   m_Name: Replay
   m_TagString: Untagged
@@ -61872,7 +61809,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1752203255}
         m_TargetAssemblyTypeName: ReplayLevel, Assembly-CSharp
-        m_MethodName: ReloadCurrentLevel
+        m_MethodName: ReplayGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -61920,21 +61857,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1570495715}
   m_CullTransparentMesh: 1
---- !u!114 &1570495720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1570495715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ab0eff593de5c0428b96c7fe437d674, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BannerAdID: ca-app-pub-3940256099942544/6300978111
-  InterstitialAdID: ca-app-pub-3940256099942544/1033173712
-  RewardAdID: 'ca-app-pub-3940256099942544/5224354917  '
 --- !u!1 &1575990470
 GameObject:
   m_ObjectHideFlags: 0
@@ -70184,6 +70106,7 @@ GameObject:
   - component: {fileID: 1752203252}
   - component: {fileID: 1752203251}
   - component: {fileID: 1752203255}
+  - component: {fileID: 1752203256}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -70299,6 +70222,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a60435e951aa54e4eac9d5b180d91d7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1752203256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752203249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5fc064c3a0384144830ba7d5105671e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BannerAdID: ca-app-pub-3940256099942544/6300978111
+  InterstitialAdID: ca-app-pub-3940256099942544/1033173712
+  RewardAdID: ca-app-pub-3940256099942544/5224354917
 --- !u!1 &1754878865
 GameObject:
   m_ObjectHideFlags: 0
@@ -87462,7 +87400,7 @@ SpriteRenderer:
   m_Size: {x: 168.67265, y: 64.57}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2086690594

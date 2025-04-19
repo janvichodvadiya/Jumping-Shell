@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.Diagnostics;
 using System;
 
-public class FirebaseMan : MonoBehaviour
+public class FirebaseManager : MonoBehaviour
 {
     FirebaseAuth Auth;
     public DatabaseReference Database;
@@ -37,12 +37,10 @@ public class FirebaseMan : MonoBehaviour
 
                 Auth = FirebaseAuth.DefaultInstance;
                 Database = FirebaseDatabase.DefaultInstance.RootReference;
-
             }
             else
             {
                 Invoke(nameof(InitializeFireBase), 2);
-                Debug.Log("anythign");
             }
         });
     }
@@ -64,19 +62,20 @@ public class FirebaseMan : MonoBehaviour
 
     public void CrashGame()
     {
-        throw new System.Exception("Crash Game");
+        throw new System.Exception("GameCrash");
     }
 
     public void LoginIntoFirebase()
     {
         string password = Password.text;
         string email = Email.text;
-        Debug.Log("User" + email + "::" + password);
+        Debug.Log("Username" + email + "::" + password);
         Auth.SignInWithEmailAndPasswordAsync(email, password).ContinueWith(task =>
         {
+            Debug.Log("Git it here");
             if (task.IsFaulted) { Debug.Log(task.Exception.ToString()); return; }
             var user = task.Result;
-            Debug.Log("Account create ");
+            Debug.Log("Account created ");
             UserID = user.User.UserId;
             AddDatabaseData();
             PlayerDataPrefs.IsLoggedIn = true;
@@ -91,7 +90,7 @@ public class FirebaseMan : MonoBehaviour
         string json = JsonUtility.ToJson(UserDataClss);
         Database.Child("Users").Child(UserID).SetRawJsonValueAsync(json).ContinueWith(task =>
         {
-            if (task.IsCompleted) { Debug.Log("DataSaved "); }
+            if (task.IsCompleted) { Debug.Log("DataSaved success fully"); }
         });
     }
 

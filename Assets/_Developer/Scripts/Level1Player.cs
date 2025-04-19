@@ -1,4 +1,4 @@
-﻿/*using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -165,7 +165,7 @@ public class Level1Player : MonoBehaviour
         return false;
     }
 }
-*/
+
 
 /*  // JOystick move
 float xMovement = joystick.Horizontal;
@@ -175,6 +175,7 @@ Vector2 moveDirection = new Vector2(xMovement, yMovement) * Speed;
 rb.velocity = new Vector2(moveDirection.x, rb.velocity.y);
 */
 
+/*
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -207,27 +208,21 @@ public class Level1Player : MonoBehaviour
     void Update()
     {
         Move();
-        // Jump method is not needed in Update anymore because it's triggered by the UI button
     }
 
     void Move()
     {
-        float Xmove = Input.GetAxis("Horizontal");
-        float Ymove = Input.GetAxis("Vertical");
-        rb.velocity += new Vector2(Xmove, Ymove) * Time.deltaTime * Speed;
-
-        /*
+//Joystickmove
         float xMovement = joystick.Horizontal;
         float yMovement = joystick.Vertical;
-
+        
         Vector2 moveDirection = new Vector2(xMovement, yMovement) * Speed;
         rb.velocity = new Vector2(moveDirection.x, rb.velocity.y);
-        */
-    }
 
-    // Public method to be called by the UI Button to trigger Jump
+    }
     public void OnJumpButtonPressed()
     {
+//btn jump
         if (isGrounded || jumpCount < maxJumps)
         {
             JumpSound.Play();
@@ -347,3 +342,4 @@ public class Level1Player : MonoBehaviour
         return false;
     }
 }
+*/
